@@ -1,3 +1,5 @@
+from encoder import encode_image
+
 
 def main():
     """Entry point for the application script"""

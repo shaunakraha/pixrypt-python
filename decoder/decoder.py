@@ -10,9 +10,9 @@ __email__ = "shaunakraha@gmail.com"
 
 
 def decode_image(img_file, passkey, version=1):
+    read_text = ""
     if version == 1:
         #TODO Incorporate passkey usage in decrypt
-        read_text = ""
         im = Image.open(img_file)
         pix = im.load()
         x = 0

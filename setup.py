@@ -162,7 +162,8 @@ setup(
     # executes the function `main` from this package when invoked:
     entry_points={  # Optional
         'console_scripts': [
-            'encoder=encoder:main',
+            'encode=encoder:encode_image',
+            'decode=decoder:decode_image',
         ],
     },
 )
