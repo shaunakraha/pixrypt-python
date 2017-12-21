@@ -11,6 +11,8 @@ __email__ = "shaunakraha@gmail.com"
 
 def encode_image(text, version=1, outfile="output.png", img_width=720):
     if version == 1:
+        #TODO: Create Passkey
+        passkey = "000000"
         img_height = ((1 + (len(text) / 3)) / img_width) + 1
         im = Image.new('RGB', (img_width, img_height))
         i = 0
@@ -33,3 +35,4 @@ def encode_image(text, version=1, outfile="output.png", img_width=720):
                 im.putpixel((x, y), (col0, col1, col2))
             i = i + 1
         im.save(outfile)
+    return passkey
