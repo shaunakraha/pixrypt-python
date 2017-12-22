@@ -9,14 +9,14 @@ def test_success():
 
 def test_encode():
     sample_text = "This is a sample text."
-    import encoder
+    from source import encoder
     passkey = encoder.encode_image(sample_text)
     return passkey
 
 
 def test_decode(passkey):
     img_file = "output.png"
-    import decoder
+    from source import decoder
     text = decoder.decode_image(img_file, passkey)
     return text
 
