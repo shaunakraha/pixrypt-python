@@ -29,23 +29,23 @@ def encode_image(text, version=1, outfile="output.png", img_width=720):
             img_width = 1 + (len(text) / 3)
         im = Image.new('RGB', (img_width, img_height))
         i = 0
-        col0 = 0
-        col1 = 0
-        col2 = 0
+        c0 = 0
+        c1 = 0
+        c2 = 0
         for letter in text:
             val = 2 * ord(letter)
             y = 0
             x = i / 3
             if i % 3 == 0:
-                col0 = val
+                c0 = val
             if i % 3 == 1:
-                col1 = val
+                c1 = val
             if i % 3 == 2:
-                col2 = val
+                c2 = val
                 while x > (img_width - 1):
                     x = x - img_width
                     y = y + 1
-                im.putpixel((x, y), (col0, col1, col2))
+                im.putpixel((x, y), (c0, c1, c2))
             i = i + 1
         im.save(outfile)
     return passkey
